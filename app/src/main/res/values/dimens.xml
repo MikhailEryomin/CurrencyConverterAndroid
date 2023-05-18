@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_and_edit_width"></dimen>
+    <dimen name="settings_radiogroup_padding">10dp</dimen>
+
+</resources>

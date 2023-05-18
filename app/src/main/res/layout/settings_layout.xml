@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/settings_round_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Convert Accuracy: "
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/settings_round_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/settings_round_headline"
+        app:layout_constraintTop_toBottomOf="@+id/settings_round_headline">
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:textAlignment="textEnd"
+            android:id="@+id/settings_round_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.1" />
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:textAlignment="textEnd"
+            android:id="@+id/settings_round_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.01" />
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:textAlignment="textEnd"
+            android:id="@+id/settings_round_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.001" />
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:textAlignment="textEnd"
+            android:id="@+id/settings_round_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0001" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/settings_limit_header"
+        android:layout_width="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="4dp"
+        android:layout_height="wrap_content"
+        android:text="History max size: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/settings_round_radiogroup"
+        app:layout_constraintTop_toBottomOf="@id/settings_round_radiogroup" />
+
+    <RadioGroup
+        android:id="@+id/settings_limit_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/settings_limit_header"
+        app:layout_constraintTop_toBottomOf="@+id/settings_limit_header">
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:id="@+id/setting_limit_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:id="@+id/setting_limit_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10" />
+
+        <RadioButton
+            android:padding="@dimen/settings_radiogroup_padding"
+            android:id="@+id/setting_limit_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/settings_clean_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete cache"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

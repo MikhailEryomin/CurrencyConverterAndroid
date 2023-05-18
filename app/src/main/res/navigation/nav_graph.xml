@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/convert_fragment_nav">
+
+    <fragment
+        android:id="@+id/convert_fragment_nav"
+        android:label="Currency converter"
+        tools:layout="@layout/convert_fragment"
+        android:name="com.eremix.app.ConvertFragmentController"
+        >
+        <action
+            android:id="@+id/action_convert_fragment_nav_to_choosing_country_nav"
+            app:destination="@id/choosing_country_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_convert_fragment_nav_to_settings_layout"
+            app:destination="@id/settings_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/choosing_country_nav"
+        android:label="Choose a country"
+        tools:layout="@layout/choosing_country"
+        android:name="com.eremix.app.ChooseCountryController"
+        >
+        <action
+            android:id="@+id/action_choosing_country_nav_to_convert_fragment_nav"
+            app:destination="@id/convert_fragment_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_nav"
+        android:label="Settings"
+        tools:layout="@layout/settings_layout"
+        android:name="com.eremix.app.SettingsFragmentController"
+        />
+
+</navigation>
